@@ -1,0 +1,9 @@
+_G.bruhh = true
+while _G.bruhh do
+   wait(.25)
+   for i,v in pairs(game.Workspace.Mobs:GetChildren()) do
+   if v:FindFirstChild("Torso") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and (v.Torso.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude < 12 then
+game:GetService("ReplicatedStorage").GameRemotes.DamageMelee:InvokeServer(v)
+end
+end
+end
